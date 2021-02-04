@@ -1,0 +1,17 @@
+{% extends 'tasks/base.html' %}
+
+{% block content %}
+<div class="center-column">
+    <div class="item-row">
+        <h3>Editar tarefa:</h3>
+
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ form.title }}
+            <h3>Completada:</h3>
+            {{ form.complete }}
+        <input class="btn btn-sm btn-info" type="submit" name="Update Task" value="Salvar">
+        </form>
+    </div>
+</div>
+{% endblock %}
